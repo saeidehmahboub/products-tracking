@@ -41,7 +41,25 @@ Navigate to the backend directory:
 ```bash
 cd backend
 ```
+#### Run Database Migration:
 
+Follow these steps to create migration based on models:
+
+```bash
+dotnet ef migrations add InitialCreate
+```
+Then run the following command to update the database:
+
+```bash
+dotnet ef database update
+```
+
+If you receive an error related to `dotnet-ef`, please install it with the following command:
+
+```bash
+dotnet tool install --global dotnet-ef --version 8.0
+```
+ 
 Follow these steps to run the backend:
 
 #### 1. Restore dependencies:
