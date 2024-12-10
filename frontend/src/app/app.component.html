@@ -1,1 +1,32 @@
-<app-product-list />
+<nav class="bg-gray-50 dark:bg-gray-700 mb-8">
+  <div class="max-w-screen-xl px-4 py-3 mx-auto">
+    <div class="flex items-center">
+      <ul
+        class="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-sm"
+      >
+        <li>
+          <a
+            class="text-gray-900 dark:text-white hover:underline"
+            [routerLink]="['/products']"
+            >Manage Products</a
+          >
+        </li>
+        <li>
+          <a
+            class="text-gray-900 dark:text-white hover:underline"
+            [routerLink]="['/events']"
+            >Events</a
+          >
+        </li>
+        <li>
+          <a
+            [routerLink]="['/dashboard']"
+            class="text-gray-900 dark:text-white hover:underline"
+            >Dashboard</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>

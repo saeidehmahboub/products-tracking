@@ -1,20 +1,20 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 import { map, Observable } from 'rxjs';
-import { Product } from '../models/product.model';
+import { Event } from '../models/event.model';
 import { Response } from '../models/response.model';
 
 @Injectable({
   providedIn: 'root',
 })
-export class ProductService {
-  private apiUrl = 'http://localhost:5140/api/Products';
+export class EventService {
+  private apiUrl = 'http://localhost:5140/api/EventLogs';
 
   constructor(private http: HttpClient) {}
 
-  getProducts(): Observable<Product[]> {
+  getEvents(): Observable<Event[]> {
     return this.http
-      .get<Response<Product>>(`${this.apiUrl}?pageNumber=1&pageSize=10`)
+      .get<Response<Event>>(`${this.apiUrl}?pageNumber=1&pageSize=10`)
       .pipe(map((response) => response.result));
   }
 }

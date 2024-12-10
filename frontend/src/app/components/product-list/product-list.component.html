@@ -1,21 +1,6 @@
-<div>
-  <h2>Product List</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Price</th>
-      </tr>
-    </thead>
-    <tbody>
-      @for (product of products; track product.id) {
-      <tr>
-        <td>{{ product.id }}</td>
-        <td>{{ product.name }}</td>
-        <td>{{ product.price }}</td>
-      </tr>
-      }
-    </tbody>
-  </table>
-</div>
+<app-table
+  [headers]="['Id', 'Product Name', 'Price', 'Action']"
+  [keys]="['id', 'name', 'price']"
+  [action]="{ label: 'Edit', link: '/edit' }"
+  [data]="products"
+/>

@@ -1,0 +1,13 @@
+<app-table
+  [headers]="[
+    'Id',
+    'Product Id',
+    'Product Name',
+    'Event',
+    'Create At',
+    'Action'
+  ]"
+  [keys]="['id', 'productId', 'productName', 'event', 'createdAt']"
+  [action]="{ label: 'Edit', link: '/edit' }"
+  [data]="events"
+/>
